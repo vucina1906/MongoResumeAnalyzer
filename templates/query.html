@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Resumes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='image.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Query Resumes in Database</h2>
+
+        <!-- Buttons for Different Queries -->
+        <form action="/run_query" method="get">
+            <button type="submit" name="query" value="top_skills" class="btn btn-primary w-100 mb-3">Find Top 5 Most Common Skills</button>
+            <button type="submit" name="query" value="high_experience" class="btn btn-primary w-100 mb-3">Find Resumes with 5+ Years of Experience</button>
+            <button type="submit" name="query" value="python_devs" class="btn btn-primary w-100 mb-3">Find Candidates with Python Skills</button>
+            <button type="submit" name="query" value="serbia_candidates" class="btn btn-primary w-100 mb-3">Find Candidates from Serbia</button>
+            <button type="submit" name="query" value="multi_skill_candidates" class="btn btn-primary w-100 mb-3">Find Candidates with Python, SQL & ML</button>
+            <button type="submit" name="query" value="certified_candidates" class="btn btn-primary w-100 mb-3">Find Candidates with 3+ Certifications</button>
+            <button type="submit" name="query" value="top_locations" class="btn btn-primary w-100 mb-3">Find Top 5 Locations with Most Candidates</button>
+            <button type="submit" name="query" value="high_match_candidates" class="btn btn-primary w-100 mb-3">Find Candidates with 70%+ Job Match</button>
+            <button type="submit" name="query" value="average_experience_per_skill" class="btn btn-primary w-100 mb-3">Find Average Experience Per Skill</button>
+        </form>
+        
+
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
