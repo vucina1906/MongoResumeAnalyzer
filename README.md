@@ -36,7 +36,7 @@ instead vucina19931906:**********@ it will be your username and password mongodb
 
 -------------------------------- 
 
-You can also customize the app.py file and change sample job decription (predifined jobs) or skills database and also countries and customize it accordingly to your needs. 
+You can also customize the app.py file to change the sample job descriptions (predefined jobs), the skills database, and the list of countries to better fit your needs. 
 
 
 
